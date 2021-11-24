@@ -1,0 +1,38 @@
+
+.nav-item {
+    color: #000;
+}
+
+body{
+    background-color:rgb(15, 78, 78);
+    color: blanchedalmond;
+}
+
+.jumbotron{
+    background-color:rgb(133, 125, 125);
+}
+
+nav {
+    background-color: gray;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: blanchedalmond;
+}
+
+.card-body{
+    color: blanchedalmond;
+}
+
+.div {
+    color: blanchedalmond;
+    background-color: blanchedalmond;
+}
+
+a{
+    color: blanchedalmond;
+}
+
+li h4{
+    color: blanchedalmond;
+}
