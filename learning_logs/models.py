@@ -15,7 +15,7 @@ class Topic(models.Model):
         """return a string representation of the model."""
         return self.text.title()
 
-
+## add update time.
 class Entry(models.Model):
     """Something specific learned about a topic."""
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
@@ -31,4 +31,5 @@ class Entry(models.Model):
         if len(self.text) < 50:
             return f"{self.text}"
         return f"{self.text[:50]}..." 
-        
+    
+
