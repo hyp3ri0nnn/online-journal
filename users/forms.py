@@ -1,12 +1,12 @@
 from django import forms
 from django.forms import ModelForm, fields
 
-from .models import Profile
+# from .models import Profile
 
 
-class ProfileForm(ModelForm):
-    class Meta:
-        model = Profile
-        fields = ["image", "about", "username"]
+# class ProfileForm(ModelForm):
+#     class Meta:
+#         model = Profile
+#         fields = ["image", "about", "username"]
 
 

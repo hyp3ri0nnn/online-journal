@@ -10,6 +10,11 @@
 
 {% block content %}
     
+    
+    <div class=text-center>
+    <a href="{% url 'learning_logs:new_topic' %}"> <i class="fas fa-plus" aria-setsize="7x"> </i>   </a> 
+    </div>  
+
     {% for topic in topics %}
 
             <div class="card mb-5 mt-5">

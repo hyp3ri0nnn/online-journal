@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
-from .forms import ProfileForm
+# from .forms import ProfileForm
 
 from .models import Profile, User
 # Create your views here.
@@ -39,19 +39,19 @@ def user_profile(request, user_id):
     return render(request, "profile/profile.html", context)
 
 
-def create_profile(request):
-    if request.method != 'POST':
-        # Display blank registration form. 
-        form = ProfileForm()
-    else:
-        # Process completed form.
-        form = ProfileForm(data=request.POST)
+# def create_profile(request):
+#     if request.method != 'POST':
+#         # Display blank registration form. 
+#         form = ProfileForm()
+#     else:
+#         # Process completed form.
+#         form = ProfileForm(data=request.POST)
 
-        if form.is_valid():
-            form.save()
-            # Log the user in and then redirect to home page.
-            return redirect('learning_logs:index')
+#         if form.is_valid():
+#             form.save()
+#             # Log the user in and then redirect to home page.
+#             return redirect('learning_logs:index')
 
-    # Display a blank or invalid form.
-    context = {'form': form}
-    return render(request, 'profile/create.html', context)
+#     # Display a blank or invalid form.
+#     context = {'form': form}
+#     return render(request, 'profile/create.html', context)
