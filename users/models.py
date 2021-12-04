@@ -4,7 +4,7 @@ from django.db.models.deletion import CASCADE
 from django.db.models.fields.files import ImageField
 from django.forms.models import ModelForm
 from django.http import request
-from django.views.generic import ListView, DetailView
+
 # Create your models here.
 
 
