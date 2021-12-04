@@ -13,32 +13,37 @@
     {% bootstrap_javascript jquery='full' %}
 
     <link id="myStyleSheet" rel="stylesheet" type="text/css" href="{% static 'learning_logs/dark.css' %}">
-
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
 </head>
 <body>
         <nav class="navbar navbar-expand-md mb-4 ">
         <a class="navbar-brand" href="{% url 'learning_logs:index'%}">
          Learning Log</a>
+         
+         <button class="btn btn-dark mx-auto" onclick="swapStyle(dark)"><i class="fas fa-moon"></i></button>
+         <button class="btn btn-light mx-auto" onclick="swapStyle(light)"> <i class="fas fa-sun"></i> </button>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse"
          data-target="#navbarCollapse" aria-controls="navbarCollapse"
-         aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span></button>
+         aria-expanded="false" aria-label="Toggle navigation" >
+         <span><i class="fas fa-caret-up"></i></span></button>
+         
+
+        
         
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
+
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a href="{% url 'learning_logs:topics' %}" class="nav-link">Topics
                     </a>
                 </li>
-            </ul>
+            
 
-            <ul class="navbar-nav mx-auto">
-            <button class="btn btn-dark" onclick="swapStyle(dark)">Dark</button>
-            <button class="btn btn-light" onclick="swapStyle(light)">Light</button>
-            </ul>
+            
 
-            <ul class="navbar-nav ml-auto">
+            
 
                 {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -84,6 +89,12 @@
             document.getElementById('myStyleSheet').href = sheet
             localStorage.setItem('theme', sheet)
         }
+
+        function check_navbar(){
+            var is_clicked = $("#navbarCollapse").hasClass("collapsed");
+            alert(is_clicked);
+        }
+
     </script>
 
 

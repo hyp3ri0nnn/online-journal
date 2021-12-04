@@ -8,11 +8,13 @@ from django.http import Http404
 from .models import Topic,Entry
 from .forms import TopicForm, EntryForm
 
+
+
 # Create your views here.
 
 def index(request):
     """The home page for learning_logs."""
-    home_page_topics = Topic.objects.filter(public=True)
+    home_page_topics = Topic.objects.filter(public=True).order_by('-date_added')
     context = {"topics": home_page_topics}
     return render(request, 'learning_logs/index.html', context)
 
